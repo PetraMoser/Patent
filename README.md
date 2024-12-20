@@ -8,8 +8,8 @@ Please cite the corresponding publication if you use the data.
 
 | Dataname 	| Datafile 	|  Publication			|
 | --- |---| ---| 
-| Data on patents, hybrids, citations, and improvements in yields. | patents_with_improvements_in_yields.xlsx	| 	Innovation and Patents. Oxford Handbook of Economic History, forthcoming.      | 	
-| 	|  	| 	​“Patent Citations - An Analysis of Quality Differences and Citing Practices in Hybrid Corn” (with Joerg Ohmstedt and Paul Rhode). Management Science, Volume 64, Issue 4. April 2018, pp. 1477-1973.        | 	
+| 	|  	| 	Innovation and Patents. Oxford Handbook of Economic History, forthcoming.      | 	
+| Data on patents, hybrids, citations, and improvements in yields. | patents_with_improvements_in_yields.xlsx	|  	​Patent Citations - An Analysis of Quality Differences and Citing Practices in Hybrid Corn” (Petra Moser, Joerg Ohmstedt and Paul Rhode). Management Science, Volume 64, Issue 4. April 2018, pp. 1477-1973.        | 	
 | 	|  	| 	“Compulsory Licensing and Innovation - Evidence from German Patents after World War I“ (with Joerg Baten and Nicola Bianchi).  Journal of Development Economics, Volume 126, May 2017. Slides. Data on German patents for chemical inventions, 1900-30.       | 	
 | 	|  	|  	“Patent Pools, Competition and Innovation.  Evidence from 20 Industries under the New Deal” (with Ryan Lampe). Journal of Law, Economics, & Organization, Volume 32, 2016, pp. 1-36.  Oliver Williamson Prize, Runner-Up for Best Paper Published in 2016. Do file and data.       | 	
 | 	|  	| 	"Patents and Innovation in Economic History. Annual Review of Economics, Volume 8, 2016. Working paper.       | 	
