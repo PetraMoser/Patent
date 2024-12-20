@@ -26,10 +26,14 @@ Please cite the corresponding publication if you use the data.
 | Individual-level data for 1851 exhibits from France with locations.	| FrenchExibits_w_locations.xlsx 	| 	“Do Patents Weaken the Localization of Innovations?  Evidence from World's Fairs, 1851-1915.”  The Journal of Economic History, Volume 71, Number 2, June 2011, pp. 363-382.    | 	
 | Main data	|  JEH_data140123.dta	|  	“Do Patent Pools Encourage Innovation?  Evidence from the 19th-Century Sewing Machine Industry” with Ryan Lampe.  The Journal of Economic History, Volume 70, Issue 04, December 2010, pp. 898-920. | 	
 | Stitches per minute data.	| stitch_data140124.xls	|  	“Do Patent Pools Encourage Innovation?  Evidence from the 19th-Century Sewing Machine Industry” with Ryan Lampe.  The Journal of Economic History, Volume 70, Issue 04, December 2010, pp. 898-920. | 	
-|  Data on all prizes in 1851.	| |	“How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs,” The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236. Slides. Data for regressions; individual-level data with locations for Britain and France. | 	
+|  Data on all prizes in 1851.	| Awards1851_German.xlsx |	“How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs,” The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236. Slides. | 	
+|  Data for regressions	| rpat509rep.xls |	“How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs,” The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236. | 	
+| Individual-level data for 1851 exhibits from Britain with locations.	|  Britain1851.xls	| “How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs,” The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236.| 	
+| Individual-level data for 1851 exhibits from France with locations.	| FrenchExibits_w_locations.xlsx 	|  “How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs,” The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236.| 	
 | 	|  	| 	“Was Electricity a General Purpose Technology?  Evidence from Historical Patent Citations” with Tom Nicholas, The American Economic Review, Papers and Proceedings, May 2004, vol. 94, no.2, pp.388-394.   | 	
 | 	| 	|   | 	
 | 	| 	|   | 
+
 
 
 
