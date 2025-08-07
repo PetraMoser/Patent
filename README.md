@@ -44,7 +44,7 @@ We have the following project layout:
 ## Data Files for Replication Code
 | **Code Description** | **Code File** | **Data File(s) Used** |
 |----------------------|---------------|-----------------------|
-|Replication of Figure 1.4 | Figure_1.4.R | Brit_patents_app_sealed1617-1938.xlsx|
+|Replication of Figure 1.4 | `Figure_1.4.R` | Brit_patents_app_sealed1617-1938.xlsx|
 ---
 
 ## Notes
