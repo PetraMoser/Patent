@@ -19,7 +19,7 @@ We have the following project layout:
 
 | **Data Description** | **Data File** | **Publication** |
 |----------------------|---------------|------------------|
-| Number of patent applications and sealed patents in Great Britain between 1614 and 1932| Brit_patents_app_sealed1617-1938.xlsx | *Mitchell, Brian R. British historical statistics. CUP Archive, 1988.* |
+| Number of patent applications and sealed patents in Great Britain between 1614 and 1932| `Brit_patents_app_sealed1617-1938.xlsx` | *Mitchell, Brian R. British historical statistics. CUP Archive, 1988.* |
 | General innovation and patent data | *(Not specified)* | *Innovation and Patents.* *Oxford Handbook of Economic History*, forthcoming. |
 | Data on patents, hybrids, citations, and yield improvements | `patents_with_improvements_in_yields.xlsx` | *Patent Citations - An Analysis of Quality Differences and Citing Practices in Hybrid Corn*, *Management Science*, 2018. |
 | German chemical patents, 1900–1930 | `germ_pat_130906.dta` | *Compulsory Licensing and Innovation - Evidence from German Patents after WWI*, *JDE*, 2017. |
