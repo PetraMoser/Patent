@@ -5,12 +5,21 @@ This repository contains historical patent data and replication code for the boo
 > **Please cite the corresponding publication if you use any of the data.**
 
 ---
+## 📁 Repository Structure
+We have the following project layout:
 
-## File Origins for Tables and Figures
+```text
+/
+├── data/                # Raw data files (e.g., .csv, .xlsx, .dta)
+├── code/                # Analysis scripts (e.g., .R, .py)
+└── README.md            # Project documentation
+```
+
+## Data Files for Figures and Tables
 
 | **Data Description** | **Data File** | **Publication** |
 |----------------------|---------------|------------------|
-| Number of patent applications and sealed patents in Great Britain between 1614 and 1932| Brit_patents_app_sealed1617-1938.xlsx | Mitchell, Brian R. British historical statistics. CUP Archive, 1988. |
+| Number of patent applications and sealed patents in Great Britain between 1614 and 1932| Brit_patents_app_sealed1617-1938.xlsx | *Mitchell, Brian R. British historical statistics. CUP Archive, 1988.* |
 | General innovation and patent data | *(Not specified)* | *Innovation and Patents.* *Oxford Handbook of Economic History*, forthcoming. |
 | Data on patents, hybrids, citations, and yield improvements | `patents_with_improvements_in_yields.xlsx` | *Patent Citations - An Analysis of Quality Differences and Citing Practices in Hybrid Corn*, *Management Science*, 2018. |
 | German chemical patents, 1900–1930 | `germ_pat_130906.dta` | *Compulsory Licensing and Innovation - Evidence from German Patents after WWI*, *JDE*, 2017. |
@@ -30,7 +39,12 @@ This repository contains historical patent data and replication code for the boo
 | Britain 1851 exhibits (individual-level) | `Britain1851.xls` | *How Do Patent Laws Influence Innovation?*, *AER*, 2005. |
 | France 1851 exhibits (individual-level) | `FrenchExibits_w_locations.xlsx` | *How Do Patent Laws Influence Innovation?*, *AER*, 2005. |
 | *(General reference)* | *(Not specified)* | *Was Electricity a General Purpose Technology?*, *AER Papers & Proceedings*, 2004. |
+---
 
+## Data Files for Replication Code
+| **Code Description** | **Code File** | **Data File(s) Used** |
+|----------------------|---------------|-----------------------|
+|Replication of Figure 1.4 | Figure_1.4.R | Brit_patents_app_sealed1617-1938.xlsx|
 ---
 
 ## Notes
