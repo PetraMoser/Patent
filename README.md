@@ -1,9 +1,4 @@
----
-title: "Patent Data Documentation"
-output: github_document
----
-
-# Patent
+# Pirates and Patentents Replication File
 
 This repository contains historical patent data used in various academic publications.
 
