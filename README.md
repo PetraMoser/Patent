@@ -1,6 +1,6 @@
 # Pirates and Patentents Replication File
 
-This repository contains historical patent data used in various academic publications.
+This repository contains historical patent data and replication code for the book *"PIRATES AND PATENTS: THE ROLE OF INTELLECTUAL PROPERTY IN THE DEVELOPMENT OF THE WESTERN WORLD"* by Petra Moser
 
 > **Please cite the corresponding publication if you use any of the data.**
 
