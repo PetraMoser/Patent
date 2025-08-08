@@ -58,7 +58,7 @@ brit_patent.df %>%
     geom_vline(xintercept = 1883, linetype = 'dotted') +
     annotate("text", x = 1855.5, y = 12, label = "1852 Act", angle = -90, hjust = 0, size = 4) +
     annotate("text", x = 1885.5, y = 12, label = "1883 Act", angle = -90, hjust = 0, size = 4) +
-    annotate("text", x = 1839, y = 9, label = "1851 World Fair", vjust = 0, size = 4)
+    annotate("text", x = 1835, y = 9, label = "1851 World Fair", vjust = 0, size = 4)
 
 ggsave(paste0(output_path, "figure1.4.png"), width = 8, height = 5)
   
