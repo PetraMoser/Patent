@@ -18,7 +18,7 @@ library(ggrepel)
 
 # data paths and data 
 data_path <- '../Data/'
-output_path <- '../Chapter 1/Figure_1.4/'
+output_path <- '../Chapter 1/'
 
 
 brit_patent.df <- 

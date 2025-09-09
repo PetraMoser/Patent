@@ -1,0 +1,5 @@
+Data Analysis for Pirates and Patents by Petra Moser
+
+This folder includes replication code for all figures and tables in the book
+
+Folder z.old has other replication code not part of the replication package

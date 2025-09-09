@@ -1,0 +1,143 @@
+Data Analysis for Pirates and Patents by Petra Moser
+
+This folder includes the following datasets:
+
+DATASETS:
+
+1. Brit_patents_app_sealed1617-1938.xlsx: manually collected data on patents sealed and applications between 1617 and 1938. This data is at the year level.
+
+2. rpat100513.xls: Dataset on number of exhibits, countries, and prize data for 1815 and 1876 exhibits. Data is at the country-year level
+	- `id`: country ID
+
+	- `country`: Name of country
+
+	- `year`: Year is exhibit. Can be either 1851 or 1876
+
+	- `council`: Refers to the number of Gold Council medals received by a country in the exhibit of that year
+
+	- `prize`: Refers to the number of silver prizes received by a country in the exhibit of that year
+
+	- `honor`: Refers to the number of bronce prizes received by a country in the exhibit of that year
+
+	- `pleng`: Patent length per country per exhibit year
+	
+	- `plengext`: Patent length extension per country per exhibit year
+	
+	- `pfee`: Patent fee per country per exhibit year
+	
+	- `pop`: population per country
+
+	- `gdpmad`: GDP data from Madison per country in thousands
+	
+	- `gdpmadpc`: GDP per capita from Madison per country in thoudanss. This variable is missing some values. We recommend you compute your own GDP per capita by dividing gdpmad / pop
+
+	- `class[xx]`: these columns are the number of exhibits per industry class per country per exhibit year. To see which class is which, please refer to the file readme.doc in the exhibit_data folder
+
+	- `coun[xx]`, `prix[xx]`, `hon[xx]`: These columns refer to the number of prizes and medals won across exhibits per industry class 
+	
+	- `medall`: Total number of medals across council, primal, and honall.
+	
+	- `counall`: Total number of council medals received by the exhibitors of a country
+
+	- `prizall`: Total number of prizes received by the exhibitors of a country
+
+	- `honall`: Total number of honors received by the exhibitors of a country
+
+3. usa1851_JO90724.xls: Exhibit data for US exhibits. Each row is an exhibit.
+	- `Exhibit`: Exhibit number as coded in catalogue. It's a unique number per row
+	
+	- `City`: Exhibitor's city of origin
+
+	- `Population`: City population in thousands
+
+	- `State`: Exhibitor's state of origin
+
+	- `Description`: Brief description of the exhibit
+	
+	- `Award`: Number of awards (medals for gold, bronze, and silver) for the exhibit
+
+	- `Patents`: If different from 0, the exhibit was patented
+
+	- `Industry`: Industry number as coded in read_me_Britain1851.doc
+
+	- `Patented`: 1 if patented, 0 otherwise
+
+	- `Patentno`: patent number 
+
+	- `Year of issue`: Year when it was patented
+
+4. Britain1851.xls: Exhibit data for British exhibits. Each row is an exhibit
+	- `number`: Exhibit number as coded in catalogue. It's a unique number per row
+
+	- `name`: Name of exhibitor. Either inventor or organization that represents the invention
+
+	- `address`: Street associated with `name`
+	
+	- `city`: Exhibitor's city of origin
+
+	- `population`: City population in thousands
+
+	- `country`: Exhibitor's country of origin in Britain: Scotland, N. Ireland, England, etc. 
+	
+	- `award`: Number of awards (medals for gold, bronze, and silver) for the exhibit
+
+	- `reference_to_patent`: If different from 0, the exhibit was patented
+
+	- `description`: Brief description of the exhibit
+
+	- `industryclass`: Industry number as coded in read_me_Britain1851.doc
+
+5. industry.dta: Industry labels per class number as coded in read_me_Britain1851.doc
+	- `industry class`: matches `industry class` variable in Britain1851.xls and `Industry` in usa1851_JO90724.xls.
+	
+	- `industry`: more general industry number. Several industry class numbers match a same industry in industry variable
+
+	- `ind_lbl`: Name of the industry (Label)
+
+6. sewing_machines906022.xls sheet: Tab sm pat total pat: Number of British and US patents per year along with the share of sewing-machine patents per country per year. British patents don't include tables and stands and US patents exclude attachments and tables
+	- `Year`: Years between 1850 to 1885
+
+	- `British patents`: British patents per year on sewing machines
+
+	- `British Patents (less tables and stands): Total British patents on sewing machines less tables and stands
+
+	- `All British Patents`: Total British patents across inventions per year
+
+	- `Proportion`: British share of sewing machine patents (British Patents) over all British patents
+
+	- `British Proportion (less attachments and tables)...6`: British proportion of sewing machines (less attachments and tables) over all British patents
+
+	- `All US Patents`: All patents across inventions in the US per year
+
+	- `US Sewing Machine Parts (less attachments and tables)`: Number of sewing-machine patents in the US less attachments and tables per year
+
+7. usa1851_census.xls: US Exhibits for 1851 Great Exhibit in London
+	- `Exhibit`: Exhibit number
+
+	- `Name`: Exhibitor name
+
+	- `City`: City where exhibit was created
+
+	- `Population`: Population of exhibition city
+
+	- `State`: State of exhibit origin
+
+	- `Description`: Description of exhibit
+
+	- `Award`: Number of awards per exhibit
+
+	- `Award industry`: Industry in the catalogue
+
+	- `Patents`: Is different from 0, exhibit was patented
+
+	- `Industry`: Industry where innovation falls under the catalogue
+
+	- `Patented`: equals to 1 if patented, 0 otherwise
+ 
+
+Xx. PlantPat_DateMerge.dta: Between 1850 and 1885, a total of 4,563 patents were granted in the USPTO main class 112 (“sewing”).  From these data, we exclude patents for ancillary inventions, including “attachments” (subclasses 101 and 122 to 153) and “table and stands” (subclass 217).  Our final sample contains 3,508 patents issued between 1850 and 1885. We also compare our data with sewing machine patents in Knight’s (1877) Mechanical Dictionary. Knight includes 337 additional patents, but few of them are for improvements in sewing machines; 42 percent of Knight’s additional patents are for tables and stands, 26 percent are miscellaneous parts such as bobbin winders and tension devices.  To measure changes in invention in the absence of a pool, we construct a complementary data set of 1,493 British patents between 1850 and 1885 by searching A Cradle of Invention…for sewing machine patents.
+	- `patent number`: patent number
+
+	- `originator1`: Inventor name
+
+	- `gender1`: gender of inventor
