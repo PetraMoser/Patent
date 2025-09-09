@@ -27,7 +27,7 @@ We have the following project layout:
 | US sewing machine industry patent pools | `RJE_data140123.dta` | *Patent Pools and Innovation in Substitute Technologies*, *RAND Journal*, 2014. |
 | Chemical patent datasets (main, primary classes, indigo subset) | `chem_patents_maindataset.dta`<br>`chem_patents_primaryclassesdataset.dta`<br>`chem_patents_indigodataset.dta` | *Compulsory Licensing: Evidence from the Trading with the Enemy Act*, *AER*, 2012. |
 | Crystal Palace Fair prize data, 1851 | `Awards1851_German.xlsx` | *Prizes, Publicity, and Patents*, *JIE*, 2013. |
-| British exhibits and prizes, 1851 | `Britain1851.xls` | *Innovation without Patents – Evidence from World’s Fairs*, *JLE*, 2012. |
+| British exhibits and prizes, 1851. Note: for location-based analyses, if a city does not have population it is considered a rural place. | `Britain1851.xls` | *Innovation without Patents – Evidence from World’s Fairs*, *JLE*, 2012. |
 |  | *(See file above)* | *Did Plant Patents Create the American Rose?*, in *The Rate and Direction of Technological Change*, 2012. |
 |  | *(See file above)* | *Patent Pools: Licensing Strategies in the Absence of Regulation*, *Advances in Strategic Management*, 2012. |
 | Britain 1851 exhibits with location data | `Britain1851.xls` | *Do Patents Weaken the Localization of Innovations?*, *JEH*, 2011. |
