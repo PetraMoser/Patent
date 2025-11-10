@@ -56,6 +56,22 @@ Data for Moser (2003, 2005) were originally collected from two official catalogu
 - 1851 Exhibits: Royal Commission. Official Catalogue of the Great Exhibition of the Work of Industry of All Nations 1851, Third Corrected and Improved Edition. London: Spicer Brothers, 1851.
 - 1876 Exhibits: United States Centennial Commission. International Exhibition 1876 Official Catalogue, Second and Revised Edition. Philadelphia: John R. Nagle and Company, 1876.
 - 1851 Awards: Berichterstattungs-Kommission der Deutschen Zollvereins-Regierungen. Amtlicher Bericht über die Industrie-Austellung aller Völker zu London im Jahre 1851. Vols. I–III. Berlin: Verlag der Deckerschen Geheimen Ober-Hofbuchdruckerei, 1852–1853.
+
+## Primary Sources
+This folder includes copies of the historical sources relating to the Copyright Law in 1801. 
+
+| **File** |     **Source**     |      **Description**     |   **Citation**  |
+|----------|--------------------|--------------------------|-----------------|
+|French_Copyright_Law_1793.png|Code du Commerce, ou Recueil de Lois, Réglemens et Arrêtés, pour les Tribunaux de Commerce (1799)|Photocopy of the French Chénier Act in July 19th, 1793. This granted authors of all genres, composers, and painters the exclusive rights to sell their work and extends the rights for 10 years after the death of authors.|Giorcelli & Moser 2020, Appendix B, p. 32|
+|Copyright_Law_Cisalpine_Republic_1801.pdf|Legge N. 423 19 Fiorle Anno IX Repubblicano, Raccolta delle leggi, proclami, ordini ef avvisi pubblicati in Milano dal giorno 13 Peatile anno VII, n. 144, Milano, 1801|Official collection of laws and decrees issued in Milan during the late Cisalpine Republic that encompassed parts of northern Italy, specifically Lombardy and Venetia. Article 1 provides copyrights to authors of every kind. Article 2 provides hereditary rights to heirs or assignees for 10 years after the author's death.|Giorcelli & Moser 2020, p. 4170|
+|papal_state_literacy_scientific_work_1826.pdf|Editio N. 433, 28 Settembree, 1826|Transcript of the official copyright law in papal state in 1826|Giorcelli & Moser 2020, Appendix B, pp. 39-40|
+|sicily_intellectual_property_1828.pdf|REGIO DECRETO NO. 1904, 5 FEBBRAIO, 1828|Transcript of the official copyright law in the Kingdom of Two Scicilies in 1828|Giorcelli & Moser 2020, Appendix B, p. 40|
+|bileteral_treaty_austria_1840.pdf|CONVENZIONE 22 MAGGIO 1840 SEGUITA TRA SUA MAESTÀ IL RE DI SARDEGNA E L’IMPERATORE D’AUSTRIA A FAVORE DELLA PROPRIETÀ E CONTRO LA CONTRAFFAZIONE DELLE OPERE SCIENTIFICHE, LETTERARIE E ARTISTICHE|Transcript of the Bilateral Treat with Austria in 1840. This treaty granted property rights to literary and artistic works with an extension of 30 years after author's death|Giorcelli & Moser 2020, Appendix B, pp. 40-44|
+|italy_copyright_1865.pdf|LEGGE 25 GIUGNO 1865 NO. 2337 SUI DIRITTI SPETTANTI AGLI AUTORI DELLE OPERE DELL’INGEGNO|Italian Copyright Law of 25 June 1865, No. 2337. Issued under Vittorio Emanuele II, it consolidated Italy's first national copyright statute after unification. These laws were downloaded from Uberatzzi (law firm) back in 2013. The website is no longer available but we are making the transcription available here.|Giorcelli & Moser 2020, Appendix B, pp. 41-45|
+|carte_sciolte6268.png|Archivio Storico Della Cità di Torino (ACS), Carte Sciolte (1111-1848)|Transcript for opera composition between Francesco Bendetto Ricci and Giuseppe Mosca, Teatro Alla Scala in Milano, January 16, 1802|Giorcelli & Moser 2020, Appendix B, p. 20|
+|carte_sciolte6261.png|Archivio Storico Della Cità di Torino (ACS), Carte Sciolte (1111-1848)|Letter from the impresario Angelo Petracchi to the composer Giovanni Pacini, Treatro Alla Scala in Milano, December 12, 1819|Giorcelli & Moser 2020, Appendix B, p. 23|
+|carte_sciolte6253.png|Archivio Storico Della Cità di Torino (ACS), Carte Sciolte (1111-1848)|Letter from the composer Stefano Pavesi to the impresatio Giacomo Pregliasco of the Teatro Regio in Torino, November 3, 1803|Giorcelli & Moser 2020, Appendix B, p. 22|
+ 
 ## Notes
 
 - Some data files appear in multiple studies; cite all relevant publications.
