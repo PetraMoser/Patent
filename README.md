@@ -57,6 +57,10 @@ Data for Moser (2003, 2005) were originally collected from two official catalogu
 - 1876 Exhibits: United States Centennial Commission. International Exhibition 1876 Official Catalogue, Second and Revised Edition. Philadelphia: John R. Nagle and Company, 1876.
 - 1851 Awards: Berichterstattungs-Kommission der Deutschen Zollvereins-Regierungen. Amtlicher Bericht über die Industrie-Austellung aller Völker zu London im Jahre 1851. Vols. I–III. Berlin: Verlag der Deckerschen Geheimen Ober-Hofbuchdruckerei, 1852–1853.
 
+## Patenting Rate in Urban vs. Rural Areas Data
+Data for US exhibits in 1876 for the Centennial fair, found in `usa1851_JO90724.xls`, includes the patenting rates across Britain and the United States for both rural and urban areas. Since place names change over time, I use historical gazetteers like *Bartholomew’s Gazetteer of the British Isles* (1887) to identify towns whose names or borders have changed. Matching locations with population data from the British census yield city size for 5,317 (83.4 percent) of British exhibits. Since cities and towns that do not show up in the census are very likely to be small, I assign them to towns with fewer than 10,000 people. To control for historical border changes within London, I assign districts (such as Clerkenwell and Islington) that are part of London today to the City of London and maintain the record of their district name.
+
+
 ## Primary Sources
 This folder includes copies of the historical sources relating to the Copyright Law in 1801. 
 
