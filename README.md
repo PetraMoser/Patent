@@ -20,15 +20,26 @@ We have the following project layout:
 | **Data Description** | **Data File** | **Publication** |
 |----------------------|---------------|------------------|
 | Number of patent applications and sealed patents in Great Britain between 1614 and 1932| `Brit_patents_app_sealed1617-1938.xlsx` | *Mitchell, Brian R. British historical statistics. CUP Archive, 1988.* |
-|Individual exhibits, countries, and prices for 1815 and 1876 Britain and US Exhibits| `rpat100513.xls`| *How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs, The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236*|
-|Exhibits for US 1876 exhibits| `usa1851_JO90724.xls`| *How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs, The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236*|
+| Individual exhibits, countries, and prices for 1815 and 1876 Britain and US Exhibits| `rpat100513.xls`| *How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs, The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236*|
+| Prize-winning exhibitions on the publication *Scientific American* and prize-winning exhibits on the Crystal Palace Fair of 1851. | `pat_prize_sciam_cit.dta` | *Prizes, Publicity, and Patents – Non-Monetary Awards as a Mechanism to Encourage Innovation*, with Tom Nicholas. Journal of Industrial Economics, 2013 Volume 61: pp. 763–788. |
+| Number of innovations per country for the 1851 Great Exhibition (London, Crystal Palace) and the 1876 Centennial Exhibition (Philadelphia). Includes GDP and patent-length information. | `rpat509rep.xls` | *Innovation without Patents – Evidence from World’s Fairs*, The Journal of Law and Economics, Volume 55, No. 1, February 2012, pp. 43-74. |
+| Exhibits for US 1876 exhibits| `usa1851_JO90724.xls`| *How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs, The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236*|
 | British exhibits and prizes, 1851. Note: for location-based analyses, if a city does not have population it is considered a rural place. | `Britain1851.xls` | *Innovation without Patents – Evidence from World’s Fairs*, *JLE*, 2012. |
-|Industry labels per class number | `industry.dta` | *How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs, The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236* | 
-|Number of British and US patents per year. Note: Shares of sewing-machine patents per country per year year are included. British patents don't include tables and stands. US patents exclude attachments and tables | `sewing_machines906022.xls` tab: `sm pat total` | *Do Patent Pools Encourage Innovation?  Evidence from the 19th-Century Sewing Machine Industry with Ryan Lampe.  The Journal of Economic History, Volume 70, Issue 04, December 2010, pp. 898-920.* |
-|US exhibits for 1851 Great Exhibit in London | `usa1851_census.xls` | *How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs, The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236* |
-| Data on patent pools in 20 industries under the New Deal | `jleo_data150617.dta` | *Patent Pools, Competition and Innovation*, *JLEO*, 2016. |
+| Industry labels per class number | `industry.dta` | *How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs, The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236* | 
+| Number of British and US patents per year. Note: Shares of sewing-machine patents per country per year year are included. British patents don't include tables and stands. US patents exclude attachments and tables | `sewing_machines906022.xls` tab: `Tab sm pat total pat` | *Do Patent Pools Encourage Innovation?  Evidence from the 19th-Century Sewing Machine Industry with Ryan Lampe.  The Journal of Economic History, Volume 70, Issue 04, December 2010, pp. 898-920.* |
+| US exhibits for 1851 Great Exhibit in London | `usa1851_census.xls` | *How Do Patent Laws Influence Innovation?  Evidence from Nineteenth-Century World Fairs, The American Economic Review, Volume 95, Number 4, September 2005, pp. 1214-1236* |
+| Data on patent pools in 20 industries under the New Deal | `pools111203b.xlsx`, sheet = `pool_chars.csv` | *Patent Pools, Competition and Innovation*, *JLEO*, 2016. |
 | US sewing machine industry patent pools | `RJE_data140123.dta` | *Patent Pools and Innovation in Substitute Technologies*, *RAND Journal*, 2014. |
 | Sewing machine patent pools – main data | `JEH_data140123.dta` | *Do Patent Pools Encourage Innovation?*, *JEH*, 2010. |
+| Patents issued per chemical field to U.S. inventors with indicator identifying if subclass was confiscated under the Trading with the Enemy Act (TWEA). | `twea_data.dta` | *Compulsory Licensing: Evidence from the Trading with the Enemy Act*, with Alessandra Voena. The American Economic Review. Volume 102, Issue 1, February 2012, pp. 396–427. |
+| Patents issued in Germany to U.S. inventors between January 1, 1900, and December 31, 1930. The dataset includes field-level indicators for whether the corresponding technology had at least one German-owned U.S. patent licensed to a U.S. firm under the Trading with the Enemy Act (TWEA). | `class_year.dta` | *Compulsory Licensing and Innovation - Evidence from German Patents after World War I*, with Joerg Baten and Nicola Bianchi.  Journal of Development Economics, Volume 126, May 2017. |
+| Italian opera-level data including state of premier, year, and composer. Additional indicators include longevity of opera and if included in Amazon or performed at the Metropolitan Opera. | `20years.dta` | *Copyright and Creativity. Evidence from Italian Operas*, with Michela Giorcelli. Appendix. Journal of Political Economy, Volume 128, Number 11, November 2020, pp. 4163-4210. |
+| Composer-level data for Italian composers living abroad with the year of return to Italy. | `Fig 5.xlsx` | *Copyright and Creativity. Evidence from Italian Operas*, with Michela Giorcelli. Appendix. Journal of Political Economy, Volume 128, Number 11, November 2020, pp. 4163-4210. |
+| Italian opera performances including longevity of opera and number of performances after premier. | `repeated_performances140405.dta` |  *Copyright and Creativity. Evidence from Italian Operas*, with Michela Giorcelli. Appendix. Journal of Political Economy, Volume 128, Number 11, November 2020, pp. 4163-4210. |
+| Price data on publication books with indicators of author, volume, and publication year. | `dat_rom_ecb_final.dta` | *Dead Poet’s Property – How Does Copyright Influence Price?*, with Xing Li and Megan MacGarvie. RAND Journal of Economics 49 (1): 2018, pp. 181-205.|
+| Citation data for scientific books with year of citation and indication if book was part of the Book Republication Program (BRP). | `books_data.dta`; `brp_dataset.dta` | *Effects of Copyright on Science - Evidence from the WWII Book Republication Program*, with Barbara Biasi. Forthcoming in the AEJ Microeconomics. Vol. 13, No. 4, November 2021. pp. 218-60. |
+| Citations by Men of Science  (MoS) and PhD students in mathematics for BRP books. | `mos_citations.dta` | *Effects of Copyright on Science - Evidence from the WWII Book Republication Program*, with Barbara Biasi. Forthcoming in the AEJ Microeconomics. Vol. 13, No. 4, November 2021. pp. 218-60. |
+| Library information with citations attributed to BRP books. Includes coordinates. | `libraries_books.dta`; `libraries_cit_coord.dta` | *Effects of Copyright on Science - Evidence from the WWII Book Republication Program*, with Barbara Biasi. Forthcoming in the AEJ Microeconomics. Vol. 13, No. 4, November 2021. pp. 218-60. |
 ---
 
 ## Data Files for Replication Code
@@ -36,18 +47,29 @@ We have the following project layout:
 |----------------------|---------------|-----------------------|
 |Replication of Figure 1.4 | `Figure_1.4.R` | `Brit_patents_app_sealed1617-1938.xlsx`|
 |Replication of Figure 3.1 |  `Figure_3.1.R` | `rpat100513.xls`|
-|Replication of Figure 3.3 |  `Figure_3.2.R` | `rpat100513.xls`|
-|Replication of Figure 4.3 |  `Figure_4.3.R` | `usa1851_JO90724.xls`|
-|Replication of Figure 5.1 |  `Figure_5.1.R` | `rpat100513.xls`|
-|Replication of Figure 5.5 |  `Figure_5.5.R` | `rpat509rep.xls`|
-|Replication of Figure 7.1 |  `Figure_7.1.R` | `sewing_machines906022.xls`, sheet = `Tab sm pat total pat`|
-|Replication of Figure 7.2 |  `Figure_7.2.R` | `RJE_data140123.dta`|
-|Replication of Table 3.1 |  `Table_3.1.R` | `rpat100513.xls`|
-|Replication of Table 4.1 |  `Table_4.1.R` | `Britain1851.xls`, `rpat100513.xls`, and `usa1851_census.xls`|
-|Replication of Table 4.2 |  `Table_4.2.R` | `industry.dta` and `Britain1851.xls`|
-|Replication of Table 5.1 |  `Table_5.1.R` | `usa1851_JO90724.xls`, `Britain1851.xls`, and `industry.dta`|
-|Replication of Table 5.3 |  `Table_5.3.R` | `Britain1851.xls` and `industry.dta`|
-|Replication of Table 7.2 |  `Table_7.2.R` | `pools111203b.xlsx`, sheet = `pool_chars.csv`|
+|Replication of Figure 3.6 |  `Figure_3.6.R` | `rpat100513.xls`|
+|Replication of Figure 3.7 |  `Figure_3.7.R` | `pat_prize_sciam_cit.dta`|
+|Replication of Figure 5.1 |  `Figure_5.1.R` | `usa1851_JO90724.xls`; `Britain1851.xls`; `industry.dta`|
+|Replication of Figure 5.2 |  `Figure_5.2.R` | `rpat100513.xls`|
+|Replication of Figure 5.4 |  `Figure_5.4.R` | `rpat509rep.xls`|
+|Replication of Figure 6.1 |  `Figure_6.1.R` | `sewing_machines906022.xls`, sheet = `Tab sm pat total pat`|
+|Replication of Figure 6.2 |  `Figure_6.2.R` | `RJE_data140123.dta`|
+|Replication of Figure 9.4 |  `Figure_9.4.R` | `twea_data.dta`|
+|Replication of Figure 9.5 |  `Figure_9.5.R` | `twea_data.dta`|
+|Replication of Figure 9.7 |  `Figure_9.7.R` | `twea_data.dta`|
+|Replication of Figure 9.9 |  `Figure_9.7.R` | `class_year.dta`|
+|Replication of Figure 11.2 |  `Figure_11.2.R` | `20years.dta`|
+|Replication of Figure 11.3 |  `Figure_11.3.R` | `Fig 5.xlsx`|
+|Replication of Figure 11.4 |  `Figure_11.4.R` | `repeated_performances140405.dta`|
+|Replication of Figure 11.5 |  `Figure_11.5.R` | `dat_rom_ecb_final.dta`|
+|Replication of Figure 11.7 |  `Figure_11.7.R` | `books_data.dta`|
+|Replication of Figure 11.8 |  `Figure_11.8.R` | `books_data.dta`|
+|Replication of Figure 11.9 |  `Figure_11.9.R` | `brp_dataset.dta`; `mos_citations.dta`|
+|Replication of Figure 11.10 |  `Figure_11.10.R` | `libraries_books.dta`|
+|Replication of Figure 11.11 |  `Figure_11.11.R` | `libraries_cit_coord.dta`|
+|Replication of Table 4.1 |  `Table_4.1.R` | `Britain1851.xls`; `usa1851_census.xls`|
+|Replication of Table 6.1 |  `Table_6.1.R` | `pools111203b.xlsx`, sheet = `pool_chars.csv`|
+|Replication of Table 9.2 |  `Table_9.2.R` | `class_year.dta`|
 ---
 
 ## Sources for Exhibition Data
@@ -78,6 +100,7 @@ This folder includes copies of the historical sources relating to the Copyright 
 |`carte_sciolte6268.png`|Archivio Storico Della Cità di Torino (ACS), Carte Sciolte (1111-1848)|Transcript for opera composition between Francesco Bendetto Ricci and Giuseppe Mosca, Teatro Alla Scala in Milano, January 16, 1802|Giorcelli & Moser 2020, Appendix B, p. 20|
 |`carte_sciolte6261.png`|Archivio Storico Della Cità di Torino (ACS), Carte Sciolte (1111-1848)|Letter from the impresario Angelo Petracchi to the composer Giovanni Pacini, Treatro Alla Scala in Milano, December 12, 1819|Giorcelli & Moser 2020, Appendix B, p. 23|
 |`carte_sciolte6253.png`|Archivio Storico Della Cità di Torino (ACS), Carte Sciolte (1111-1848)|Letter from the composer Stefano Pavesi to the impresatio Giacomo Pregliasco of the Teatro Regio in Torino, November 3, 1803|Giorcelli & Moser 2020, Appendix B, p. 22|
+-------
  
 ## Notes
 
