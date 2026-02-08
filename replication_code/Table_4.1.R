@@ -1,4 +1,4 @@
-# Description: Replication script for Table 2.1
+# Description: Replication script for Table 4.1
 # Author: Laura Carreno Carrillo
 
 # Set working directory to script folder
@@ -20,7 +20,7 @@ library(gt) # format table
 
 # data paths and data 
 data_path <- '../Data/'
-output_path <- '../Chapter 3/'
+output_path <- '../Chapter 4/'
 
 britain.df <- read_excel(paste0(data_path, 'Britain1851.xls'))
 us.df <- read_excel(paste0(data_path, 'usa1851_census.xls'))
@@ -56,10 +56,10 @@ table.df <-
                         patent_share = round(total_patented/ total_exhibits, 4),
                         awards = sum(award, na.rm = T),
                         share_awards = round(awards / total_exhibits,4),
-                        patent_fees = total_patented * 30)) %>%
+                        patent_fees = 618)) %>% # as established by Lerner (2000, Table 3)
     # Format table to make it publication-ready
     gt(groupname_col = 'year') %>%
-    tab_spanner(label = 'Table 4.1 - Patenting Rates for British and U.S. Exhibits in 1851',
+    tab_spanner(label = 'Patenting Rates for British and U.S. Exhibits in 1851',
         columns = c(total_exhibits,
                     total_patented,
                     patent_share,
@@ -81,7 +81,8 @@ table.df <-
         patent_share = 'Share Patented',
         awards = 'Awards',
         share_awards = 'Share Awards',
-        patent_fees = 'Patente fees') %>%
+        patent_fees = 'Patente fees'
+        ) %>%
     fmt_percent(columns = c(patent_share, share_awards), decimals = 2) %>%
     fmt_number(columns = c(total_exhibits, total_patented, awards, patent_fees),
                decimals = 0, use_seps = TRUE) %>%

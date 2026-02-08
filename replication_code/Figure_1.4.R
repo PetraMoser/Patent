@@ -50,15 +50,15 @@ brit_patent.df %>%
     theme(legend.position = c(.9, .1),
           legend.title = element_blank(),
           legend.box.background = element_rect(fill = 'white', color = 'black'),
-          legend.key.size = unit(1, "lines"),
+          legend.key.size = unit(1, 'lines'),
           legend.text = element_text(size = 10)) +
     scale_linetype_manual(values = c('longdash', 'solid'),
                           labels = c('Patent Applications', 'Patent Sealed')) +
     geom_vline(xintercept = 1852, linetype = 'dotted') +
     geom_vline(xintercept = 1883, linetype = 'dotted') +
-    annotate("text", x = 1855.5, y = 12, label = "1852 Act", angle = -90, hjust = 0, size = 4) +
-    annotate("text", x = 1885.5, y = 12, label = "1883 Act", angle = -90, hjust = 0, size = 4) +
-    annotate("text", x = 1835, y = 9, label = "1851 World Fair", vjust = 0, size = 4)
+    annotate('text', x = 1855.5, y = 12, label = '1852 Act', angle = -90, hjust = 0, size = 4) +
+    annotate('text', x = 1885.5, y = 12, label = '1883 Act', angle = -90, hjust = 0, size = 4) +
+    annotate('text', x = 1835, y = 9, label = '1851 World Fair', vjust = 0, size = 4)
 
-ggsave(paste0(output_path, "figure1.4.png"), width = 8, height = 5)
+ggsave(paste0(output_path, 'Figure_1.4.png'), width = 8, height = 5)
   

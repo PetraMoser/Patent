@@ -11,7 +11,7 @@ gc()
 options(stringsAsFactors = F)
 options(scipen=999)
 
-'%nin%' <- negate('%in%')
+'%nin%' <- Negate('%in%')
 
 # load packages
 library(tidyverse)
@@ -49,14 +49,24 @@ fig.df %>%
     ggplot(., aes(x = pleng, y = exhibit_pc, label = country)) +
     geom_point() +
     facet_wrap(. ~ year) +
-    labs(x = 'Patent Length (years)',
-         y = 'Exhibits per Capita (mil. population') +
+    labs(x = 'Patent Length (in Years)',
+         y = 'Exhibits per 1 Million Population') +
     theme_bw(base_size = 14) +
+    theme(panel.grid = element_blank(),
+          strip.background = element_rect(fill = 'white', color = NA),
+          strip.text = element_text(size = 12, face = 'plain')) +
     geom_text_repel() +
     scale_y_continuous(limits = c(15, 160),
                        breaks = seq(20, 160, by = 20)) +
     scale_x_continuous(breaks = seq(0, 20, by = 5),
                        limits = c(0, 20))
 
-ggsave(paste0(output_path, "figure3.1.png"), width = 11, height = 9)
+ggsave(paste0(output_path, 'Figure_3.1.png'), width = 8, height = 6)
+
+# ======== Stats ============
+stats <- 
+    fig.df %>%
+    filter(country %in% country_1851, year == 1851) %>%
+    summarise(mean = mean(exhibit_pc)) %>%
+    pull(mean)
   
