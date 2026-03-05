@@ -19,8 +19,8 @@ library(haven)
 library(ggrepel)
 
 # data paths and data 
-data_path <- '../Data/'
-output_path <- '../Chapter 6/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
 stitch.df <- read_dta(paste0(data_path, 'RJE_data140123.dta'))
 
@@ -47,10 +47,8 @@ fig.df %>%
     ggplot(., aes(x = year, 
                   y = n_pat,
                   color = stitch,
-                  linetype = stitch,
-                  shape = stitch)) +
+                  linetype = stitch)) +
     geom_line() +
-    geom_point() +
     theme_bw(base_size = 14) +
     theme(legend.position = 'bottom',
           panel.grid = element_blank(),
@@ -63,8 +61,6 @@ fig.df %>%
     scale_color_manual(values = c('#686D76', '#222222'),
                        labels = c('Chain stitch', 'Lockstitch')) +
     scale_linetype_manual(values = c('solid', 'longdash'),
-                          labels = c('Chain stitch', 'Lockstitch')) +
-    scale_shape_manual(values = c(1, 17),
                           labels = c('Chain stitch', 'Lockstitch')) +
     scale_x_continuous(breaks = seq(1850, 1890, by = 5)) +
     geom_vline(xintercept = 1856, linetype = 'dashed') +

@@ -13,7 +13,6 @@ options(scipen=999)
 
 '%nin%' <- Negate('%in%')
 
-# install dependencies and packages for school coordinates
 # install.packages("ipeds", repos = c("http://R-Forge.R-project.org", "http://lib.stat.cmu.edu/R/CRAN"), dep = TRUE)
 
 # load packages
@@ -25,10 +24,10 @@ library(maps)
 library(cowplot)
 
 # data paths and data 
-data_path <- '../Data/'
-output_path <- '../Chapter 11/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
-library.df <- haven::read_dta(paste0(data_path, 'BRP/libraries_books.dta'))
+library.df <- haven::read_dta(paste0(data_path, 'libraries_books.dta'))
 
 # Format table to recreate BRP vs Swiss Books
 schools <- c('Crear Library, Chicago', 'Ohio State U', 'UC Berkeley', 'Duke', 'NY Public Library', 'Yale',
@@ -54,7 +53,7 @@ panelA <-
     fig11.10.df %>%
     ggplot(., aes(x = reorder(university, -tot_brp), y = tot_brp)) +
     geom_bar(stat = 'identity') +
-    theme_minimal(base_size = 14) +
+    theme_bw(base_size = 14) +
     theme(axis.text.x = element_text(angle = 45,  hjust = 1),
           plot.subtitle = element_text(family = 'Times New Roman', hjust = 0.5),
           panel.grid = element_blank()) +
@@ -67,7 +66,7 @@ panelB <-
     fig11.10.df %>%
     ggplot(., aes(x = reorder(university, -tot_swiss), y = tot_swiss)) +
     geom_bar(stat = 'identity') +
-    theme_minimal(base_size = 14) +
+    theme_bw(base_size = 14) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1),
           plot.subtitle = element_text(family = 'Times New Roman', hjust = 0.5),
           panel.grid = element_blank()) +

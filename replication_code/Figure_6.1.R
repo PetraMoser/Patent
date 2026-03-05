@@ -1,4 +1,4 @@
-# Description: Replication script for Figure 5.3
+# Description: Replication script for Figure 6.1
 # Author: Laura Carreno Carrillo
 
 # Set working directory to script folder
@@ -19,8 +19,8 @@ library(readxl)
 library(ggrepel)
 
 # data paths and data 
-data_path <- '../Data/'
-output_path <- '../Chapter 6/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
 patents.df <- read_excel(paste0(data_path, 'sewing_machines906022.xls'), sheet = 'Tab sm pat total pat')
 
@@ -45,18 +45,15 @@ fig.df %>%
                   y = share,
                   color = country,
                   group = country, # ggplot was having problems grouping
-                  linetype = country,
-                  shape = country)) +
+                  linetype = country)) +
     geom_line() +
-    geom_point() +
     theme_bw(base_size = 14) +
     theme(legend.position = 'bottom',
           panel.grid = element_blank(),
           axis.text = element_text(color = 'black')) +
     labs(x = '', y = '', color = '', linetype = '', shape = '') +
     scale_color_manual(values = c('#686D76', '#222222')) +
-    scale_linetype_manual(values = c('solid', 'longdash')) +
-    scale_shape_manual(values = c(22, 20)) +
+    scale_linetype_manual(values = c('longdash', 'solid')) +
     geom_vline(xintercept = 1856, linetype = 'dotted') +
     geom_text(inherit.aes = F,
               x = 1852.5, y = 0.025, 

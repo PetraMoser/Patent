@@ -19,13 +19,13 @@ library(haven)
 library(ggplot2)
 
 # data paths and data 
-data_path <- '../Data/'
-output_path <- '../Chapter 11/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
 books.df <- haven::read_dta(paste0(data_path, 'books_data.dta')) 
 
 # Plot distribution of original prices and reproduction prices
-fig.11.6.df <-
+fig.df <-
     books.df %>%
     filter(brp == 1) %>%
     select(year_c, p_original, p_reproduction) %>%
@@ -36,12 +36,13 @@ fig.11.6.df <-
         summarise(mean = mean(price, na.rm = T))
     
 
-fig.11.6.df %>%
+fig.df %>%
     ggplot(., aes(x = year_c, y = mean, fill = type)) +
     geom_bar(stat = 'identity') +
     theme_bw(base_size = 14) +
-    theme(legend.position = 'bottom') +
-    scale_fill_manual(values = c('#457b9d', '#1d3557'),
+    theme(legend.position = 'bottom',
+          panel.grid = element_blank()) +
+    scale_fill_manual(values = c('#9AA6B2', '#222222'),
                       labels = c('Original', 'Reproduction')) +
     labs(x = '',
          y = 'Mean Price per Year',

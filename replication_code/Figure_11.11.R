@@ -1,4 +1,4 @@
-# Description: Replication script for Figure 11.10
+# Description: Replication script for Figure 11.11
 # Author: Laura Carreno Carrillo
 
 # Set working directory to script folder
@@ -21,8 +21,8 @@ library(ggplot2)
 library(maps)
 
 # data paths and data 
-data_path <- '../Data/'
-output_path <- '../Chapter 11/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
 library.df <- haven::read_dta(paste0(data_path, 'libraries_cit_coord.dta'))
 US.df <- map_data('state') # state coordinates
@@ -49,4 +49,4 @@ US.df %>%
     theme_void() +
     theme(legend.position = 'none')
 
-ggsave(paste0(output_path, 'Figure_11.10.png'), width = 10, height = 6)
+ggsave(paste0(output_path, 'Figure_11.11.png'), width = 10, height = 6)

@@ -20,8 +20,8 @@ library(readxl)
 library(ggrepel)
 
 # data paths and data 
-data_path <- '../Data/operas/'
-output_path <- '../Chapter 11/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
 opera.df <- haven::read_dta(paste0(data_path, '20years.dta')) 
 
@@ -37,20 +37,17 @@ opera.df %>%
     ggplot(., aes(x = year,
                   y = operas_mean,
                   color = treated_states,
-                  shape = treated_states,
                   linetype = treated_states)) +
     geom_line() +
-    geom_point() +
     scale_linetype_manual(values = c('Lombardy & Venetia' = 'solid', 
-                                     'Other States' = 'longdash')) +
-    scale_shape_manual(values = c(19, 21)) +
+                                     'Other States' = 'dashed')) +
     geom_vline(xintercept = 1801, linetype = 'dashed', color = 'dimgray') +
     annotate('text',
              x = 1805.4, y = 7.7,
              label = '1801 Copyright Law',
              vjust = 1, size = 4, color = 'black') +
     theme_classic(base_size = 14) +
-    scale_color_manual(values = c('#1d3557', '#457b9d')) +
+    scale_color_manual(values = c('#222222', '#686D76')) +
     labs(x = '',
          y = 'Mean New Operas Per Year') +
     ylim(0, 8) +

@@ -21,8 +21,8 @@ library(MatchIt)
 library(cowplot)
 
 # data paths and data 
-data_path <- '../Data/'
-output_path <- '../Chapter 11/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
 books.df <- haven::read_dta(paste0(data_path, 'books_data.dta')) 
 
@@ -34,10 +34,8 @@ panelA <-
     summarise(English = sum(count_eng)/n(),
               Other = sum(count_noeng)/n()) %>%
     ggplot(., aes(x = year_c)) +
-    geom_line(aes(y = English, linetype = 'English'), color = '#457b9d', size = 0.5) +
-    geom_point(aes(y = English, linetype = 'English'), color = '#457b9d') +
-    geom_line(aes(y = Other, linetype = 'Other Language'), color = '#1d3557', size = 0.5) +
-    geom_point(aes(y = Other, linetype = 'Other Language'), color = '#1d3557') +
+    geom_line(aes(y = English, linetype = 'English'), color = '#9AA6B2', size = 0.5) +
+    geom_line(aes(y = Other, linetype = 'Other Language'), color = '#222222', size = 0.5) +
     geom_vline(xintercept = 1942, linetype = 'longdash', color = 'dimgray') +
     labs(subtitle = 'Panel A: Citations to BRP Books from New Work in English \n versus Other Languages',
          x = '',
@@ -48,9 +46,10 @@ panelA <-
                           values = c('English' = 'solid', 'Other Language' = 'longdash'), 
                           labels = c('English', 'Other Language')) +
     xlim(1930, 1970) +
-    theme_minimal() +
+    theme_bw() +
     theme(legend.position = 'bottom', legend.text = element_text(size = 10),
-          plot.subtitle = element_text(family = 'Times New Roman', hjust = 0.5))
+          panel.grid = element_blank(),
+          plot.subtitle = element_text(family = 'Times New Roman', hjust = 0.5, size = 12))
 
 # PSM Plot
 pscore.df <- 
@@ -113,23 +112,21 @@ panelB <-
                   color = brp,
                   linetype = brp)) +
     geom_line() +
-    geom_point(size = 1,
-               legend.title = element_blank(),
-               legend.box.background = element_rect(),
-               axis.text.x = element_text(size = 10),
-               axis.text.y = element_text(size = 10)) +
-    theme_minimal() +
+    theme_bw() +
     labs(subtitle = 'Panel B: Citations to a Matched Sample of BRP and Swiss Books',
          x = '',
          y = 'No. of citations',
          color = '',
          linetype = '') +
     theme(legend.position = 'bottom',
-          plot.subtitle = element_text(family = 'Times New Roman', hjust = 0.5)) +
-    scale_color_manual(values = c('#1d3557', '#457b9d')) +
+          panel.grid = element_blank(),
+          plot.subtitle = element_text(family = 'Times New Roman', hjust = 0.5, size = 12)) +
+    scale_color_manual(values = c('#9AA6B2', '#222222')) +
     geom_vline(xintercept = 1942, linetype = 'dashed', color = 'dimgray') +
+    scale_linetype_manual(name = '', 
+                          values = c('BRP' = 'solid', 'Swiss' = 'longdash'), 
+                          labels = c('BRP', 'Swiss')) +
     annotate('text', x = 1942, y = 0.8, label = '1942 BRP', vjust = 1, hjust = 0)
-
 
 plot_grid(panelA, panelB, ncol = 1)
 

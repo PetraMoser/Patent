@@ -21,8 +21,8 @@ library(ggplot2)
 
 
 # data paths and data 
-data_path <- '../Data/'
-output_path <- '../Chapter 11/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
 dead_poets.df <- haven::read_dta(paste0(data_path, 'dat_rom_ecb_final.dta'))
 
@@ -31,7 +31,7 @@ remove <- c('A General Collection of the Best and Most Interesting',
             'Provincial antiquities of Scotland',
             'The British Novelists: With an Essay',
             'History of Brazil')
-fig11.5.df<-
+fig.df <-
     dead_poets.df %>%
     # filter people younger than 14 years old
     filter(age <= 14,
@@ -56,13 +56,14 @@ fig11.5.df<-
                T ~ NA)) 
 
 # Binned scatterplot
-fig11.5.df %>%
+fig.df %>%
     ggplot(., aes(x = year, y = rawprice, color = as.factor(is_dead))) +
     stat_summary_bin() +
-    scale_color_manual(values = c('#78B9B5', '#2F5755'),
+    scale_color_manual(values = c('#9AA6B2', '#222222'),
                       labels = c('1' = 'Dead Poets', '0' = 'Living Poets')) +
-    theme_classic(base_size = 14) +
-    theme(legend.position = 'bottom') +
+    theme_bw(base_size = 14) +
+    theme(legend.position = 'bottom',
+          panel.grid = element_blank()) +
     geom_vline(xintercept = 1814, linetype = 'dashed', color = 'dimgray') +
     annotate('text',
              x = 1819, y = 140,

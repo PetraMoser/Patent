@@ -1,4 +1,4 @@
-# Description: Replication script for Figure 9.3
+# Description: Replication script for Figure 9.4
 # Author: Laura Carreno Carrillo
 
 # Set working directory to script folder
@@ -19,43 +19,54 @@ library(haven)
 library(ggplot2)
 
 # data paths and data 
-data_path <- '../Data/'
-output_path <- '../Chapter 9/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
 twea.df <- read_dta(paste0(data_path, 'twea_data.dta')) 
 
-fig.df <-
+# difference plot
+margin_eff <-
     twea.df %>%
-    
-    group_by(grntyr, licensed_class) %>%
-    # Mean patents across subclasses with licenses
-    summarise(patents = mean(count), 
-              .groups = 'drop') 
+    mutate(n_owned = case_when(
+        count_licenses == 0 ~ 'No licenses',
+        count_licenses == 1 ~ '1 licenses',
+        count_licenses >= 2 ~ '2 or more licenses'),
+        n_owned = factor(n_owned, levels = c('No licenses',
+                                             '1 licenses',
+                                             '2 or more licenses'))) %>%
+    group_by(grntyr, n_owned) %>%
+    summarise(patent_count = sum(count_usa),
+              n_subcl = n_distinct(uspto_class),
+              .groups = 'drop') %>%
+    mutate(patent_share = (patent_count) / n_subcl)
 
-fig.df %>%
-    ggplot(., aes(x = grntyr, y = patents, 
-                  color = as.factor(licensed_class),
-                  shape = as.factor(licensed_class),
-                  linetype = as.factor(licensed_class))) +
+margin_eff %>%
+    ggplot(., aes(x = grntyr, y = patent_share, 
+                  color = n_owned,
+                  linetype = n_owned)) +
     geom_line() +
-    geom_point() +
-    theme_bw(base_size = 12) +
-    labs(x = '',
-         y = 'Patents per year and field',
+    geom_vline(xintercept = 1919, color = 'dimgray', linetype = 'dashed') +
+    annotate('text', x = 1916, y = 1.7, label = 'TWEA', vjust = 1, size = 4) +
+    scale_linetype_manual(values = c('dotdash', 'dashed', 'solid')) +
+    scale_color_grey(start = 0.45, end = 0.2) +
+    labs(y = 'Patents per year and field',
+         x = '',
          color = '',
-         shape = '',
-         linetype = '') +
-    theme(legend.position = 'bottom',
-          panel.grid = element_blank()) +
+         linetype = '',
+         limits = '') +
     scale_x_continuous(breaks = seq(1800, 1940, by = 10)) +
-    scale_color_manual(values = c('#3291B6', '#0C2C55'),
-                       labels = c('Fields w/o Compulsory Licenses', 
-                                  'Fields with Compulsory Licenses')) +
-    scale_linetype_manual(values = c('dashed', 'solid'),
-                          labels = c('Fields w/o Compulsory Licenses', 
-                                     'Fields with Compulsory Licenses')) +
-    scale_shape_manual(values = c(5, 19),
-                       labels = c('Fields w/o Compulsory Licenses', 
-                                  'Fields with Compulsory Licenses'))
+    theme_bw(base_size = 12) +
+    theme(legend.position = 'bottom',
+          panel.grid = element_blank())
 
-ggsave(paste0(output_path, 'Figure_9.4.png'), width = 8, height = 6)            
+ggsave(paste0(output_path, 'Figure_9.4.png'), width = 7, height = 6)
+
+# Stats =====
+# Mean licensed patents by americans vs foreigners
+twea.df %>%
+    
+    # fixing "confiscated_class" variable
+    mutate(is_confiscated = ifelse(licensed_class == 1, 1, confiscated_class)) %>%
+    filter(is_confiscated == 1) %>%
+    summarise(mean = mean(count))
+    

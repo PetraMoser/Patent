@@ -20,8 +20,8 @@ library(cowplot)
 library(ggrepel)
 
 # data paths and data 
-data_path <- '../Data/operas/'
-output_path <- '../Chapter 11/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
 composers.df <- read.xlsx(paste0(data_path, 'Fig 5.xlsx'))
 
@@ -31,7 +31,6 @@ composers.df %>%
     summarise(n = n()) %>%
     ggplot(., aes(x = Date, y = n)) +
     geom_line() +
-    geom_point() +
     theme_bw(base_size = 12) +
     theme(panel.grid = element_blank()) +
     geom_vline(xintercept = 1801, linetype = 'dashed') +

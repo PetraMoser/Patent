@@ -21,22 +21,20 @@ library(cowplot)
 library(ggrepel)
 
 # data paths and data 
-data_path <- '../Data/operas/'
-output_path <- '../Chapter 11/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
 opera.df <- haven::read_dta(paste0(data_path, 'repeated_performances140405.dta'))
 
 # Count the years an opera was played for
 prem <- opera.df %>% filter(type == 'prem') %>% filter(between(year, 1791, 1820)) %>% distinct(id) %>% pull()
 
-fig.11.3.df <-
+fig.df <-
     opera.df %>%
     
     # keep performance years between 1781 and 1900
     # These are the performance years for operas created between 1871 and 1820
     filter(year <= 1900) %>%
-           #between(year, 1792, 1900)) %>% 
-           #annals == 1) %>% 
     
     group_by(title) %>%
     # Count number of repetitions
@@ -45,32 +43,32 @@ fig.11.3.df <-
               max_life = max(longevity), # assign the oldest life-span of `longevity`
               .groups = 'drop')
 
-fig.11.3.df %>%
+fig.df %>%
     ggplot(., 
            aes(x = max_life, # oldest life-span 
                y = n_repeat)) + # number of rows per opera
     geom_col() +
     
     # format figure
-    theme_classic(base_size = 14) +
+    theme_bw(base_size = 14) +
+    theme(panel.grid = element_blank()) +
     
     # add labels to life + n
     geom_vline(xintercept = 39.23, linetype = 'dashed') +
     geom_vline(xintercept = 41.23, linetype = 'dashed') +
     geom_vline(xintercept = 69.23, linetype = 'dashed') +
     geom_vline(xintercept = 79.23, linetype = 'dashed') +
-    annotate('text', x = 33, y = 120, label = 'life + 10', vjust = 1, size = 4) +
-    annotate('text', x = 47, y = 120, label = 'life + 12', vjust = 1, size = 4) +
-    annotate('text', x = 64, y = 120, label = 'life + 30', vjust = 1, size = 4) +
-    annotate('text', x = 85, y = 120, label = 'life + 40', vjust = 1, size = 4) +
-    #scale_y_continuous(breaks = seq(0, 200, by = 20)) +
-    #scale_y_continuous(breaks = seq(0, 100, by = 20)) +
+    annotate('text', x = 33, y = 250, label = 'life + 10', vjust = 1, size = 4) +
+    annotate('text', x = 47, y = 250, label = 'life + 12', vjust = 1, size = 4) +
+    annotate('text', x = 64, y = 250, label = 'life + 30', vjust = 1, size = 4) +
+    annotate('text', x = 85, y = 250, label = 'life + 40', vjust = 1, size = 4) +
+    scale_y_continuous(breaks = seq(0, 300, by = 20)) +
     labs(x = 'Years since premiere',
          y = 'Repetitions')
     
 ggsave(paste0(output_path, 'Figure_11.4.png'), width = 10, height = 8)
 
-# Check statistics
+# Check statistics ====
 mean_operas <-
     opera.df %>%
     distinct(title, .keep_all = T) %>%
@@ -87,7 +85,7 @@ mean_operas <-
     group_by(post) %>%
     summarise(mean = mean(mean))
 
-# dta with the number of operas per year, do a column for revivals, for prmemiers, for repetitions without premier, for repetitions with premier
+# Opera count ====
 num_operas <-
     opera.df %>%
     mutate(type = ifelse(type == '', 

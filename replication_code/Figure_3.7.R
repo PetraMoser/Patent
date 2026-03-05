@@ -19,8 +19,8 @@ library(haven)
 library(ggrepel)
 
 # data paths and data 
-data_path <- '../Data/'
-output_path <- '../Chapter 3/'
+data_path <- '../data/'
+output_path <- '../figures/'
 
 prize.df <- read_dta(paste0(data_path, 'pat_prize_sciam_cit.dta'))
 
@@ -33,42 +33,41 @@ fig.3.7.df <-
     summarise(patents = mean(ps),
               .groups = 'drop') %>%
     
-    # bind with average patents from prize-winning exhibits from chrystal palace 
+    # bind with average patents from prize-winning exhibits from crystal palace 
     rbind(.,
           prize.df %>%
               filter(t1AX == 1) %>%
               group_by(year) %>%
               summarise(patents = mean(ps),
                         t2X = 2, # holder for 3rd category for plotting
-                        .groups = 'drop'))
+                        .groups = 'drop')) %>%
+    mutate(t2X = factor(t2X, levels= c('2', '1', '0')))
 
 
 fig.3.7.df %>%
     ggplot(., aes(x = year, y = patents, 
-                  linetype = as.factor(t2X),
-                  shape = as.factor(t2X))) +
-    geom_line() +
-    geom_point() +
+                  linetype = t2X)) +
+    geom_line(linewidth = .6) +
     scale_y_continuous(breaks = seq(0, 2, by = 0.1)) +
-    scale_x_continuous(breaks = seq(1840, 1870, by = 2)) +
-    theme_bw(base_size = 12) +
+    scale_x_continuous(breaks = seq(1840, 1870, by = 3)) +
+    theme_bw(base_size = 13) +
     theme(legend.position = 'bottom',
           legend.text = element_text(size = 12),
           panel.grid = element_blank()) +
-    scale_linetype_manual(values = c('longdash', 'dotted', 'solid'),
-                          labels = c('Other exhibits', 
-                                     'Publications in Scientific American',
-                                     'Award-Winning Exhibits')) +
-    scale_shape_manual(values = c(19, 23, 2),
-                       labels = c('Other exhibits', 
-                                  'Publications in Scientific American',
-                                  'Award-Winning Exhibits')) +
+    scale_linetype_manual(values = c('solid', 'dashed', 'dotted'),
+                          labels = c('Prize-Winning Exhibits',
+                                     'Pub. in Scientific American',
+                                     'Other Exhibits')) +
+    scale_shape_manual(values = c(23, 19, 2),
+                       labels = c('Prize-Winning Exhibits',
+                                  'Pub. in Scientific American',
+                                  'Other exhibits')) +
     geom_vline(xintercept = 1851, linetype = 'dashed') +
-    annotate('text', x = 1845.5, y = 1.2, 
-             label = 'Crystal Palace World\'s Fair',
+    annotate('text', x = 1848, y = 1.2, 
+             label = 'Crystal Palace',
              size = 4) +
     labs(x = '',
-         y = 'U.S. patents per subclass and year',
+         y = 'U.S. Patents per Field and Year',
          linetype = '',
          shape = '') 
 
@@ -84,3 +83,5 @@ prize.df %>%
     filter(year >= 1851) %>%
     summarise(patents = mean(ps),
               .groups = 'drop')
+
+
