@@ -39,7 +39,7 @@ country_1851 <- c('Switzerland', 'Belgium', 'Saxony', 'Wurttemberg', 'Prussia', 
                   'Austria', 'Netherlands', 'Norway & Sweden', 'Denmark','US', 'Bavaria')
    
 country_1876 <- c('Norway', 'Switzerland', 'Sweden', 'Austria', 'Denmark',
-                  'France', 'Britain', 'Germany')
+                  'France', 'Britain', 'Germany', 'Netherlands')
 
 # create plot
 fig.df %>%
