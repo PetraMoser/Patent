@@ -1,6 +1,6 @@
 # Pirates and Patents Replication File
 
-This repository contains historical patent data and replication code for the book *"PIRATES AND PATENTS: THE ROLE OF INTELLECTUAL PROPERTY IN THE DEVELOPMENT OF THE WESTERN WORLD"* by Petra Moser
+This repository contains historical data on innovations (including exhibits at world fairs and patents), as well as replication codes for tables and figures in my book *"PIRATES AND PATENTS: THE ROLE OF INTELLECTUAL PROPERTY IN THE INDUSTRALIZATION OF THE WESTERN WORLD"* 
 
 > **Please cite the corresponding publication if you use any of the data.**
 
@@ -73,18 +73,17 @@ We have the following project layout:
 ---
 
 ## Sources for Exhibition Data
-Data for Moser (2003, 2005) were originally collected from two official catalogues and one commission report available at the UC Berkeley Library (1997–2002). For this book, the dataset has been extended with revised editions accessible through Google Books, including the Third and Revised Edition of the Official Catalog of the International Exhibition of 1876, the Swiss Catalogue of the International Exhibition 1876 Philadelphia, and the Special Catalogue of the Netherland Section.
+For Moser (2003, 2005) I collected data from two official catalogues and one commission report available in the holdings of the UC Berkeley Library. For this book, I have extended the data with additional editions that have become available through Google Books, including the Third and Revised Edition of the Official Catalog of the International Exhibition of 1876, the Swiss Catalogue of the International Exhibition 1876 Philadelphia, and the Special Catalogue of the Netherland Section.
 
 - 1851 Exhibits: Royal Commission. Official Catalogue of the Great Exhibition of the Work of Industry of All Nations 1851, Third Corrected and Improved Edition. London: Spicer Brothers, 1851.
 - 1876 Exhibits: United States Centennial Commission. International Exhibition 1876 Official Catalogue, Second and Revised Edition. Philadelphia: John R. Nagle and Company, 1876.
 - 1851 Awards: Berichterstattungs-Kommission der Deutschen Zollvereins-Regierungen. Amtlicher Bericht über die Industrie-Austellung aller Völker zu London im Jahre 1851. Vols. I–III. Berlin: Verlag der Deckerschen Geheimen Ober-Hofbuchdruckerei, 1852–1853.
 
-## Population Data Construction
-Population data are taken from *Annuaire international de statistique* (1916, vol. 1, État de la population (Europe)) for German states (Bavaria, Prussia, Saxony, Württemberg) and from Maddison (2006) for all other countries. Exhibits per capita differ from Moser (2003, 2005) because we use Maddison’s revised population estimates. In particular, Britain’s 1851 population is revised from 25,601,000 (older series) to 26,945,000 (Maddison 2006), a difference of +1,344,000 (+5.25%), and Austria’s from 3,950,000 to 3,978,000, a difference of +28,000 (+0.71%). These revisions mechanically change per-capita exhibit counts even when exhibit totals are unchanged.
+## Population Data 
+Population data are from *Annuaire international de statistique* (1916, vol. 1, État de la population (Europe)) for German states (Bavaria, Prussia, Saxony, Württemberg) and from Maddison (2006) for all other countries. Exhibits per capita differ from Moser (2003, 2005) because we use Maddison’s revised population estimates. In particular, Britain’s 1851 population is revised from 25,601,000 (older series) to 26,945,000 (Maddison 2006), a difference of +1,344,000 (+5.25%), and Austria’s from 3,950,000 to 3,978,000, a difference of +28,000 (+0.71%). These revisions mechanically change per-capita exhibit counts even when exhibit totals are unchanged.
 
 ## Patenting Rate in Urban vs. Rural Areas Data
 Data for US exhibits in 1876 for the Centennial fair, found in `usa1851_JO90724.xls`, includes the patenting rates across Britain and the United States for both rural and urban areas. Since place names change over time, I use historical gazetteers like *Bartholomew’s Gazetteer of the British Isles* (1887) to identify towns whose names or borders have changed. Matching locations with population data from the British census yield city size for 5,317 (83.4 percent) of British exhibits. Since cities and towns that do not show up in the census are very likely to be small, I assign them to towns with fewer than 10,000 people. To control for historical border changes within London, I assign districts (such as Clerkenwell and Islington) that are part of London today to the City of London and maintain the record of their district name.
-
 
 ## Primary Sources
 This folder includes copies of the historical sources relating to the Copyright Law in 1801. 
@@ -103,9 +102,6 @@ This folder includes copies of the historical sources relating to the Copyright 
 -------
  
 ## Notes
-
 - Some data files appear in multiple studies; cite all relevant publications.
-- File names are retained as originally released.
-- Publications include coauthors where applicable.
-
+- Unless otherwise stated, file names are the same as the file names in replication packages for each paper.
 ---
